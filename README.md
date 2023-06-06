@@ -1,5 +1,5 @@
 # SkyHawk Recovery CI
-A Free CI to Build PitchBlack Recovery
+A Free CI to Build SkyHawk Recovery
 
 ## How to Use?
 ### - Fork and Build
