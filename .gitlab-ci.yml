@@ -8,4 +8,4 @@ OrangeFox-CI:
   stage: build
   timeout: 3 hours
   script:
-    - curl -sL https://github.com/EvilAnsh/Scripts/raw/main/AOSP%20Scripts/twrp-build.sh | bash
+    - curl -sL https://github.com/EvilAnsh/Scripts/raw/PBRP/AOSP%20Scripts/twrp-build.sh | bash
