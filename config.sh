@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/EvilAnsh/device_realme_RMX2151-recovery.git -b android-12.1"
+export DT_LINK="https://github.com/harshjaat98/android_device_realme_RMX2001-pbrp -b android-12.1"
 
-export DEVICE="RMX2151"
+export DEVICE="RMX2001"
 export OEM="realme"
 
 # Build Target
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=EvilAnsh"
+export EXTRA_CMD="export OF_MAINTAINER=botboy"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
