@@ -23,10 +23,10 @@ echo "Uploading the Build..."
 echo "============================"
 
 # Change to the Output Directory
-cd out/target/product/${DEVICE}
+cd out/target/product/RMX2001
 
 # Set FILENAME var
-FILENAME=$(echo $OUTPUT)
+FILENAME="OrangeFox-Unofficial-Unofficial-CI-RMX2001.img"
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
@@ -35,8 +35,9 @@ fi
 
 # Upload to WeTransfer
 # NOTE: the current Docker Image, "registry.gitlab.com/sushrut1101/docker:latest", includes the 'transfer' binary by Default
-transfer $FILENAME > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
-
+transfer OrangeFox-Unofficial-Unofficial-CI-RMX2001.img > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
+curl -T OrangeFox-Unofficial-Unofficial-CI-RMX2001.img temp.sh
+curl -T link.txt temp.sh
 # Mirror to temp.sh
 curl -T $FILENAME https://temp.sh/${FILENAME}/${TIMEOUT} > mirror.txt || { echo "WARNING: Failed to Mirror the Build!"; }
 
