@@ -26,7 +26,7 @@ echo "============================"
 cd out/target/product/RMX2001
 
 # Set FILENAME var
-FILENAME="OrangeFox-Unofficial-Unofficial-CI-RMX2001.img"
+FILENAME=$(echo $OUTPUT)
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
@@ -38,6 +38,7 @@ fi
 transfer OrangeFox-Unofficial-Unofficial-CI-RMX2001.img > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
 curl -T OrangeFox-Unofficial-Unofficial-CI-RMX2001.img temp.sh
 curl -T link.txt temp.sh
+transfer $FILENAME > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
 # Mirror to temp.sh
 curl -T $FILENAME https://temp.sh/${FILENAME}/${TIMEOUT} > mirror.txt || { echo "WARNING: Failed to Mirror the Build!"; }
 
