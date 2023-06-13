@@ -1,5 +1,5 @@
 # 🦊 OrangeFox Recovery CI
-A Free CI to Build OrangeFox
+A Free CI to Build OrangeFox recovery
 
 ## How to Use?
 ### - Fork and Build
