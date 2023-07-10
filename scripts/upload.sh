@@ -23,7 +23,7 @@ echo "Uploading the Build..."
 echo "============================"
 
 # Change to the Output Directory
-cd out/target/product/RMX2001
+cd out/target/product/E7746
 
 # Set FILENAME var
 FILENAME=$(echo $OUTPUT)
@@ -35,8 +35,8 @@ fi
 
 # Upload to WeTransfer
 # NOTE: the current Docker Image, "registry.gitlab.com/sushrut1101/docker:latest", includes the 'transfer' binary by Default
-transfer OrangeFox-Unofficial-Unofficial-CI-RMX2001.img > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
-curl -T OrangeFox-Unofficial-Unofficial-CI-RMX2001.img temp.sh
+transfer OrangeFox-Unofficial-Unofficial-CI-E7746.img > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
+curl -T OrangeFox-Unofficial-Unofficial-CI-E7746.img temp.sh
 curl -T link.txt temp.sh
 transfer $FILENAME > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
 # Mirror to temp.sh
