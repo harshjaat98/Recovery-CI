@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/harshjaat98/twrp_device_realme_RMX2001 -b a12.1-R6"
+export DT_LINK="https://github.com/harshjaat98/android_device_micromax_E7746-pbrp -b android-10.0"
 
-export DEVICE="RMX2001"
-export OEM="realme"
+export DEVICE="E7746"
+export OEM="micromax"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
